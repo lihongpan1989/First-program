@@ -1,0 +1,11 @@
+- (void)tabBarButtonDidRepeatClick
+{
+    // 重复点击的不是精华按钮
+    if (self.view.window == nil) return;
+    
+    // 显示在正中间的不是AllViewController
+    if (self.tableView.scrollsToTop == NO) return;
+    
+    // 进入下拉刷新
+    [self headerBeginRefreshing];
+}
